@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDRScoreTracker.API", "DDRScoreTracker.API\DDRScoreTracker.API.csproj", "{4DBBBAF9-ADF7-4E18-B8E0-F40AB3117048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDRScoreTracker.API.Tests", "DDRScoreTracker.API.Tests\DDRScoreTracker.API.Tests.csproj", "{6E6B10D2-BB2D-43BA-9FAC-A3A9A47CCF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DBBBAF9-ADF7-4E18-B8E0-F40AB3117048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBBBAF9-ADF7-4E18-B8E0-F40AB3117048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBBBAF9-ADF7-4E18-B8E0-F40AB3117048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBBBAF9-ADF7-4E18-B8E0-F40AB3117048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6B10D2-BB2D-43BA-9FAC-A3A9A47CCF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6B10D2-BB2D-43BA-9FAC-A3A9A47CCF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6B10D2-BB2D-43BA-9FAC-A3A9A47CCF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6B10D2-BB2D-43BA-9FAC-A3A9A47CCF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
