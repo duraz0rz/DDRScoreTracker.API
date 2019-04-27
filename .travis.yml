@@ -1,7 +1,0 @@
-language: csharp
-solution: DDRScoreTracker.API.sln
-mono: none
-dotnet: 2.1.602
-script:
-  - dotnet restore
-  - dotnet test
