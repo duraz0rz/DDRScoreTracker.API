@@ -398,3 +398,5 @@ fabric.properties
 
 # Stupid JetBrains garbage
 .idea/
+
+.localdev/
