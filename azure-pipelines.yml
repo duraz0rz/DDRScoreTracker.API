@@ -11,11 +11,12 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  solutionFile: 'DDRScoreTracker.API.sln'
 
 steps:
-- script: dotnet restore
+- script: dotnet restore $(solutionFile)
   displayName: 'dotnet restore'
-- script: dotnet build --no-restore --configuration $(buildConfiguration)
+- script: dotnet build $(solutionFile) --no-restore --configuration $(buildConfiguration)
   displayName: 'dotnet build'
-- script: dotnet test --no-restore --no-build --configuration $(buildConfiguration)
+- script: dotnet test $(solutionFile) --no-restore --no-build --configuration $(buildConfiguration)
   displayName: 'dotnet test'
