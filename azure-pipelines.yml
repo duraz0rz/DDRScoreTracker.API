@@ -26,7 +26,7 @@ steps:
   displayName: 'Build Docker image'
   inputs:
     command: buildAndPush
-    repository: ddr-score-tracker
+    repository: duraz0rz/ddr-score-tracker
     dockerfile: DDRScoreTracker.API/Dockerfile.ci
     tags: |
       $(Build.BuildId)
