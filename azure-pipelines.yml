@@ -11,12 +11,25 @@ variables:
   solutionFile: 'DDRScoreTracker.API.sln'
 
 steps:
-- script: dotnet restore $(solutionFile)
-  displayName: 'dotnet restore'
-- script: dotnet build $(solutionFile) --no-restore --configuration $(buildConfiguration)
-  displayName: 'dotnet build'
-- script: dotnet test $(solutionFile) --no-restore --no-build --configuration $(buildConfiguration) --logger:xunit
-  displayName: 'dotnet test'
+- task: DotNetCoreCLI@2
+  displayName: 'Restore Packages'
+  inputs:
+    command: restore
+- task: DotNetCoreCLI@2
+  displayName: 'Build'
+  inputs:
+    command: build
+    arguments: --configuration $(buildConfiguration)
+- task: DotNetCoreCLI@2
+  displayName: 'Run tests'
+  inputs:
+    command: test
+    arguments: --no-build --configuration $(buildConfiguration)
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: xUnit
+    testResultsFiles: '**/TestResults/TestResults.xml'
+    failTaskOnFailedTests: true
 - task: Docker@2
   displayName: 'Log into Docker Hub'
   inputs:
