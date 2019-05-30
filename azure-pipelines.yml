@@ -28,11 +28,6 @@ steps:
     command: test
     projects: $(solutionFile)
     arguments: --no-build --configuration $(buildConfiguration)
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: xUnit
-    testResultsFiles: '**/TestResults/TestResults.xml'
-    failTaskOnFailedTests: true
 - task: Docker@2
   displayName: 'Log into Docker Hub'
   inputs:
