@@ -15,15 +15,18 @@ steps:
   displayName: 'Restore Packages'
   inputs:
     command: restore
+    projects: $(solutionFile)
 - task: DotNetCoreCLI@2
   displayName: 'Build'
   inputs:
     command: build
+    projects: $(solutionFile)
     arguments: --configuration $(buildConfiguration)
 - task: DotNetCoreCLI@2
   displayName: 'Run tests'
   inputs:
     command: test
+    projects: $(solutionFile)
     arguments: --no-build --configuration $(buildConfiguration)
 - task: PublishTestResults@2
   inputs:
