@@ -23,8 +23,7 @@ steps:
     command: buildAndPush
     containerRegistry: DockerHub
     repository: ddr-score-tracker
-    dockerfile: '**/Dockerfile.ci'
-    buildContext: .
+    dockerfile: DDRScoreTracker.API/Dockerfile.ci
     tags: |
       $(Build.BuildId)
       latest
