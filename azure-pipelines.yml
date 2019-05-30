@@ -18,10 +18,14 @@ steps:
 - script: dotnet test $(solutionFile) --no-restore --no-build --configuration $(buildConfiguration)
   displayName: 'dotnet test'
 - task: Docker@2
+  displayName: 'Log into Docker Hub'
+  inputs:
+    command: login
+    containerRegistery: DockerHub
+- task: Docker@2
   displayName: 'Build Docker image'
   inputs:
     command: buildAndPush
-    containerRegistry: DockerHub
     repository: ddr-score-tracker
     dockerfile: DDRScoreTracker.API/Dockerfile.ci
     tags: |
