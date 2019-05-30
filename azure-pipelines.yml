@@ -21,7 +21,7 @@ steps:
   displayName: 'Log into Docker Hub'
   inputs:
     command: login
-    containerRegistery: DockerHub
+    containerRegistry: DockerHub
 - task: Docker@2
   displayName: 'Build Docker image'
   inputs:
