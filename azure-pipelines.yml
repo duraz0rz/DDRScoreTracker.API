@@ -29,5 +29,5 @@ steps:
     repository: duraz0rz/ddr-score-tracker
     dockerfile: DDRScoreTracker.API/Dockerfile.ci
     tags: |
-      $(Build.BuildId)
-      latest
+      $(Build.SourceBranchName)-$(Build.SourceVersion)
+      $(Build.SourceBranchName)-latest
