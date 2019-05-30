@@ -5,9 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS publish
 WORKDIR /src
-COPY ["DDRScoreTracker.API/DDRScoreTracker.API.csproj", "DDRScoreTracker.API/"]
-WORKDIR "/src/DDRScoreTracker.API"
-RUN dotnet publish "DDRScoreTracker.API.csproj" -c Release -o /app
+COPY . .
+RUN dotnet restore
+RUN dotnet publish --no-build --configuration Release -o /app
 
 FROM base AS final
 WORKDIR /app
