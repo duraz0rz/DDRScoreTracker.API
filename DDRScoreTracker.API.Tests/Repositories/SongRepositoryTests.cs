@@ -31,7 +31,7 @@ namespace DDRScoreTracker.API.Tests.Repositories
 
             var actualSongs = await new SongRepository(mockContext.Object).GetSongs();
 
-            actualSongs.Should().NotBeEquivalentTo(expectedSongs);
+            actualSongs.Should().BeEquivalentTo(expectedSongs);
         }
     }
 }
