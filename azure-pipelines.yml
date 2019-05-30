@@ -22,6 +22,7 @@ steps:
   inputs:
     command: build
     dockerfile: '**/Dockerfile.ci'
+    buildContext: .
     tags: |
       $(Build.BuildId)
       latest
